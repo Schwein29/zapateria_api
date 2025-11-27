@@ -15,6 +15,7 @@ function conexcionsql() {
     conexion.connect(err => {
         if (err) {
             console.log(['db error'], err);
+            console.log('MySQL no está listo, reintentando...');
             setTimeout(conexcionsql, 2000);
         } else {
             console.log('DB conectada');
