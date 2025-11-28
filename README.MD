@@ -1,13 +1,19 @@
-Uhhhhhhhhhh
-la db se restaura con eso:
+# Zapateria API
 
-docker exec -i zapateria_mysql mysql -u root -p zapateria_db < db/zapateria.sql
+## Requisitos
+- Docker
+- Docker Compose
 
-y luego lo construyen con el clasic:
+## Instrucciones
+1. Clonar el repositorio
+2. Crear un archivo .env usando:
+    PORT = 4000
+    MYSQL_HOST= mysql
+    MYSQL_USER= root
+    MYSQL_PASSWORD= 
+    MYSQL_DB= zapateria_db
+3. Levantar los contenedores:
+   docker compose up --build
+4. Acceder a la API
+   http://localhost:4000
 
-docker compose up --build
-
-Ah, y pues en el env es lo mismo de siempre, solo q en lugar de localhost es:
-MYSQL_HOST= mysql
-
-Luego de eso se accede a localhost:4000
